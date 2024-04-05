@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Pacifico-Regular;
+    src: url('Pacifico/Pacifico-Regular.ttf') format('truetype'),
+         url('Pacifico/OFL.txt') format('opentype');
+}
+
+*{
+	font-family: Pacifico-Regular;
+	background-color: lightblue;
+
+}
+
+
+.titulo{
+	width: 250px;
+	text-align: center;
+	background-color: yellow;
+	color: lightblue;
+	height: 30px;
+	border-radius: 20px;
+}
+.titulo:hover{
+	text-align: center;
+	color:black;
+	border-radius: 20px;
+	transform: skewX(-20deg); 
+	background: radial-gradient(center,circle,#FF1616,#FFC100);
+	background: -moz-radial-gradient(center,circle,##FF1616,#FFC100);
+	background: -webkit-radial-gradient(center,circle,#FF1616,#FFC100);
+}
+.titulo:active{
+	color: white;
+	border-radius: 20px;
+	width: 250px;
+	text-align: center;
+	height: 30px;
+	background-color: gray;
+	background: radial-gradient(center,circle,#005DFF,#00AAFF);
+	background: -moz-radial-gradient(center,circle,#005DFF,#00AAFF);
+	background: -webkit-radial-gradient(center,circle,#005DFF,#00AAFF);
+	box-shadow: 10px 10px 20px black;
+    -moz-box-shadow: 10px 10px 20px black;
+    -webkit-box-shadow: 10px 10px 20px black;
+}
