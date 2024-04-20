@@ -17,6 +17,17 @@
                 video.pause();
             }
         }
+		window.onload = function() {
+            var video = document.getElementById("myVideo2");
+
+            video.onmouseover = function() {
+                video.play();
+            }
+
+            video.onmouseout = function() {
+                video.pause();
+            }
+        }
     </script>
 </head>
 <body>
@@ -88,7 +99,7 @@
 				</video>
 			</td>
 			<td>
-				<video id="myVideo" controls>
+				<video id="myVideo2" controls>
 					<source src="videos/vid2.mp4" type="video/mp4">
 				</video>
 			</td>
