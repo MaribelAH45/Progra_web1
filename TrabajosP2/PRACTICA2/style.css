@@ -1,0 +1,21 @@
+*{
+    background-color:peachpuff;
+}
+
+#cadena{
+    width: 50%;
+    border-radius: 3px;
+    border-color: violet;
+    height: 20px;
+    background-color: aliceblue;
+}
+#boton{
+    background-color:palevioletred ;
+    width: 50%;
+    color: white;
+    height: 30px;
+}
+#res {
+    text-align: center; 
+    margin-top: 20px; 
+}
