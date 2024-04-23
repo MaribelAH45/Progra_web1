@@ -1,12 +1,12 @@
 .nav-enlace{
 	display: inline-block;
-	background-color:#ECB897; 
+	background-color:#2B7543; 
 	color:white;
 	padding: 10px 30px;
 	text-decoration: none;
 }
 .nav-enlace:hover{
-	background-color: rosybrown;
+	background-color: #BDBDBD;
 }
 nav{
 	background: rebeccapurple;
@@ -16,7 +16,7 @@ nav{
 	justify-content: space-around;
 }
 .nav-boton{
-	background: salmon;
+	background: #00000000;
 	color: aliceblue;
 	padding: 10px 0px;
 	border: 2px solid aliceblue;
