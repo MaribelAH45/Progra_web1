@@ -31,6 +31,24 @@
     </script>
 </head>
 <body>
+	<nav>
+
+		<button class="nav-boton" onclick="accion()">MENÚ</button>
+
+		<a href="#" class="nav-enlace desaparece" >INICIO</a>
+		<a href="#" class="nav-enlace desaparece">SERVICIO</a>
+		<a href="#" class="nav-enlace desaparece">CONTACTO</a>
+		<a href="#" class="nav-enlace desaparece">REGISTROS</a>
+	</nav>
+	<!--cuando hay pocas lineas de codigo(podemos agregar el script en el html)-->
+	<script>
+		function accion(){
+			var ancla=document.getElementsByClassName('nav-enlace');
+			for(var i=0;i<ancla.length;i++){
+				ancla[i].classList.toggle('desaparece');
+			}
+		}
+	</script>
 	
 	<h1 class="titulo" >Computación cuantica</h1>
 	<h3 class="mar">Maribel Aguilar Hernandez-183375</h3>
