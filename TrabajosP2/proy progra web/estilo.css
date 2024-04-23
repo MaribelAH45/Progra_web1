@@ -1,6 +1,6 @@
 .nav-enlace{
 	display: inline-block;
-	background-color:#2B7543; 
+	background-color:#00000000; 
 	color:white;
 	padding: 10px 30px;
 	text-decoration: none;
@@ -9,7 +9,7 @@
 	background-color: #BDBDBD;
 }
 nav{
-	background: rebeccapurple;
+	background:#00000000;
 	padding: 10px;
 	/*por defecto debe tener inline block*/
 	display: flex;
