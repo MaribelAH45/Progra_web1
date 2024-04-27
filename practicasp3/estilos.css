@@ -1,0 +1,27 @@
+*{
+    background-color: sandybrown;
+}
+h1,h2{
+    color: aliceblue;
+    text-align: center;
+}
+li{
+    text-align: justify;
+}
+#boton{
+    background-color: lightcoral;
+    color: aliceblue;
+    border: 3px solid black;
+    width: 100%;
+    border-radius: 10px;
+
+}
+ul{
+    color: aliceblue;
+}
+#total{
+    color: blue;
+}
+#comentario{
+    color: blanchedalmond;
+}

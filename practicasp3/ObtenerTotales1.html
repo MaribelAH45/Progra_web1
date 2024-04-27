@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORMULARIO</title>
+   
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>	
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=4;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==20)
+        	document.getElementById("comentario").innerHTML="MUY BIEN!!!";
+        else
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Vas bien!!";
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia más";
+    }
+
+ 
+	function generar() {
+    //Crear un objeto o instancia jsPDF
+		var doc = new jsPDF();
+
+		//Definir el tamaño de la letra
+		doc.setFontSize(40);
+		//Color del texto
+		doc.setTextColor(9, 7, 121);
+		doc.text(40, 20, "Conceptos básicos");
+		doc.setTextColor(17, 122, 209); //Color en formato RGB
+		doc.setFontSize(30);
+		doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+		doc.setTextColor(0, 0, 0);
+		doc.setFontSize(10);
+		doc.text(20, 50, "20 puntos. Muy bien. \r Eres super INTELIGENTE!!");
+		doc.text(20, 70, "15 puntos. Regular. \r NO TE DESANIMES");
+		doc.text(20, 90, "0 puntos. \r SUERTE PARA LA OTRA");
+
+		var string = doc.output('datauristring');
+
+		$('iframe').attr('src', string);
+	}
+
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Contesta la encuesta</h1>
+	<h2>¿cuanto sabes?</h2>
+<div>
+	<form>
+	<ul>
+
+		<li>1.¿Cómo se llaman los animales que tienen un esqueleto articulado?</li>
+		<input type="radio" name="r1" id="r1" value="5"/>Vertebrados<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Oviparos<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Viviparos<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Invertebrados<br/>
+		
+		<li>2.¿Cómo se llama un polígono de 3 lados?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>Circulo<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Rombo<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>rectangulo<br/>
+        <input type="radio" name="r2" id="r2" value="5"/>triangulo<br/>
+
+		<li>3.¿Cómo se llaman los animales que nacen del vientre de la madre? </li>
+		<input type="radio" name="r3" id="r3" value="0"/>Oviparos<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Invertebrados<br/>
+        <input type="radio" name="r3" id="r3" value="5"/>Viviparos<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Vertebrados<br/>
+
+        <li>4.¿Cuántos cuartos de kilo hay en un kilo? </li>
+		<input type="radio" name="r4" id="r4" value="0"/>3<br/>
+        <input type="radio" name="r4" id="r4" value="5"/>4<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>2<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>6<br/>
+	</ul>
+</form>
+</div>
+<input id="boton" type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input id="boton" type="button" value="Ver resultados" onclick="generar()"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
