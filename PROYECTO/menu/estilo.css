@@ -4,7 +4,7 @@
 }
 .nav-enlace{
 	display: inline-block;
-	background-color:#00000000; 
+	background-color: #4B7C66; 
 	color:white;
 	padding: 10px 30px;
 	text-decoration: none;
@@ -13,14 +13,14 @@
 	background-color: #BDBDBD;
 }
 nav{
-	background:#00000000;
+	background: #4B7C66;
 	padding: 10px;
 	/*por defecto debe tener inline block*/
 	display: flex;
 	justify-content: space-around;
 }
 .nav-boton{
-	background: #00000000;
+	background:  #4B7C66;
 	color: aliceblue;
 	padding: 10px 0px;
 	border: 2px solid aliceblue;
