@@ -13,7 +13,7 @@
 	background-color: #BDBDBD;
 }
 nav{
-	background:#00000000;
+	background-color: #4B7C66;
 	padding: 10px;
 	/*por defecto debe tener inline block*/
 	display: flex;
