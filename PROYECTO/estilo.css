@@ -3,44 +3,45 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .nav-enlace{
-	display: inline-block;
-	background-color:#ECB897;  
-	color:white;
-	padding: 10px 30px;
-	text-decoration: none;
+      display: inline-block;
+      background-color:#00000000;
+      color:white;
+      padding: 10px 30px;
+      text-decoration: none;
 }
 .nav-enlace:hover{
-	background-color: #BDBDBD;
+    border-radius: 20px;
+      background-color: #BDBDBD;
 }
 nav{
-	background: #4B7C66;
-	padding: 10px;
-	/*por defecto debe tener inline block*/
-	display: flex;
-	justify-content: space-around;
+      background:#00000000;
+      padding: 10px;
+      /*por defecto debe tener inline block*/
+      display: flex;
+      justify-content: space-around;
 }
 .nav-boton{
-	background: #0D614D;
-	color: aliceblue;
-	padding: 10px 0px;
-	border: 2px solid aliceblue;
-	display: none;
+      background: #00000000;
+      color: aliceblue;
+      padding: 10px 0px;
+      border: 2px solid aliceblue;
+      display: none;
 }
-/*media sirve para que hagas restricciones*/
+
 @media(max-width:600px){
-	nav{
-		background: black;
-		flex-direction: column;
-	}
-	.nav-enlace{
-		margin: 10px 0px;
-	}
-	.nav-boton{
-		display: inline-block;
-	}
-	.desaparece{
-		display: none;
-	}
+      nav{
+            background: black;
+            flex-direction: column;
+      }
+      .nav-enlace{
+            margin: 10px 0px;
+      }
+      .nav-boton{
+            display: inline-block;
+      }
+      .desaparece{
+            display: none;
+      }
 }
 body{
     font-family: georgina;
