@@ -1,0 +1,80 @@
+*{
+    background-color: #41997B;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.nav-enlace{
+	display: inline-block;
+    border-radius: 4px; ;
+	background-color:#006542 ;  
+	color:white;
+	padding: 10px 30px;
+	text-decoration: none;
+}
+.nav-enlace:hover{
+	background-color: #BDBDBD;
+}
+nav{
+    border-radius: 4px;
+	background: #00472E ;
+	padding: 10px;
+	/*por defecto debe tener inline block*/
+	display: flex;
+	justify-content: space-around;
+}
+.nav-boton{
+	background: #0D614D;
+	color: aliceblue;
+	padding: 10px 0px;
+	border: 2px solid aliceblue;
+	display: none;
+}
+/*media sirve para que hagas restricciones*/
+@media(max-width:600px){
+	nav{
+		background: black;
+		flex-direction: column;
+	}
+	.nav-enlace{
+		margin: 10px 0px;
+	}
+	.nav-boton{
+		display: inline-block;
+	}
+	.desaparece{
+		display: none;
+	}
+}
+h1,h3{
+    color: black;
+    text-align: center;
+}
+p{
+    background-color: #f2f2f2;
+}
+/* Estilos para el contenedor */
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+}
+
+/* Estilos para las preguntas */
+h2 {
+    border-radius: 3px;
+    color: black;
+    text-align: center;
+    cursor: pointer; /* Cambia el cursor al pasar sobre las preguntas */
+    background-color: lightgray; /* Color de fondo de las preguntas */
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Estilos para las respuestas */
+div.respuesta {
+    border-radius: 3px;
+    display: none; /* Oculta las respuestas por defecto */
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2; /* Color de fondo de las respuestas */
+}
+
