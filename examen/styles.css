@@ -1,0 +1,57 @@
+
+/* Estilo del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightcyan;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor */
+.container {
+    background-color: sandybrown;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo para el título */
+h2 {
+    margin: 0 0 15px;
+}
+
+/* Estilo el texto */
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid salmon;
+    border-radius: 4px;
+}
+
+/* Estilo para botón */
+input[type="button"] {
+    padding: 10px 20px;
+    background-color: lightcoral;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón en hover */
+input[type="button"]:hover {
+    background-color: gray;
+}
+
+/* Estilo para el párrafo de resultados */
+#iguales {
+    margin-top: 20px;
+    font-size: 1.2em;
+}

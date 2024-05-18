@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Palíndromo</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript">
+        function palindromo() {
+            var cadena = document.getElementById("cad").value;
+            var resultado = "La frase \"" + cadena + "\" \n";
+            var cadenaOriginal = cadena.toLowerCase();
+            var letrasEspacios = cadenaOriginal.split("");
+            var cadenaSinEspacios = "";
+
+            // Elimina los espacios
+            for (var i in letrasEspacios) {
+                if (letrasEspacios[i] != " ") {
+                    cadenaSinEspacios += letrasEspacios[i];
+                }
+            }
+
+            // Crea una cadena invertida
+            var letras = cadenaSinEspacios.split("");
+            var letrasReves = cadenaSinEspacios.split("").reverse();
+            var iguales = true;
+
+            // Compara las dos cadenas
+            for (var i in letras) {
+                if (letras[i] != letrasReves[i]) {
+                    iguales = false;
+                    break;
+                }
+            }
+
+            // Mostrar el resultado
+            if (iguales) {
+                resultado += " es un palíndromo";
+            } else {
+                resultado += " no es un palíndromo";
+            }
+
+            document.getElementById("iguales").innerText = resultado;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2>Frase a evaluar</h2>
+            <input type="text" id="cad" name="palindromo"><br>
+        </form><br>
+        <input type="button" value="Evaluar frase" onclick="palindromo()"><br>
+        <p id="iguales"></p><br>
+    </div>
+</body>
+</html>
